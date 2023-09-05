@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:insert="/layout/head"></head>
+<body style="background: url('/image/background.jpg')">
+<nav th:insert="/layout/navbar"></nav>
+<div class="container px-5  my-5 mb-lg-5 mb-5">
+    <div class="text-center mb-5">
+        <h1 class="fw-bolder" th:text="${title}"></h1>
+        <p class="lead fw-normal text-muted mb-3">The Trust For Travel</p>
+        <a class="btn btn-lg btn-success" th:href="@{/travels/about}">About Us</a>
+        <a class="btn btn-lg btn-success" th:href="@{/travels/new}">Reservation</a>
+    </div>
+</div>
+<script th:insert="/layout/js-style"></script>
+</body>
+</html>

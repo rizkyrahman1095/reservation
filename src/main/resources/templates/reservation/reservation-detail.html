@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:insert="/layout/head"></head>
+<body style="background: url('/image/background.jpg')">
+<nav th:insert="/layout/navbar"></nav>
+<div class="container px-5 my-5 mb-lg-5 mb-5">
+  <form role="form" method="get" th:action="@{/travels}" th:object="${travelId}" class="row g-3">
+    <div class="col-md-12">
+      <label for="inputAddress" class="form-label"></label>
+      <input type="text" class="form-control"
+             id="inputAddress"
+             placeholder="Name" th:field="${travelId.name}">
+    </div>
+    <div class="col-md-12">
+      <label for="inputEmail4" class="form-label"></label>
+      <input type="email" class="form-control"
+             id="inputEmail4" placeholder="Email" th:field="${travelId.email}">
+    </div>
+    <div class="col-md-8">
+      <label for="phoneNumber" class="form-label"></label>
+      <input type="text" class="form-control"
+             id="phoneNumber" placeholder="PhoneNumber" th:field="${travelId.phoneNum}">
+    </div>
+    <div class="col-md-4">
+      <label for="Country" class="form-label"></label>
+      <input type="text" class="form-control"
+             id="country" placeholder="Country" th:field="${travelId.country}">
+    </div>
+    <div class="col-xxl-12 ">
+      <label for="inputAddress2" class="form-label"></label>
+      <input type="text" class="form-control"
+             id="inputAddress2" placeholder="Explain your travel" th:field="${travelId.content}">
+    </div>
+    <div class="col-12">
+      <button th:href="@{/travels}" class="btn btn-primary">back</button>
+    </div>
+  </form>
+</div>
+
+
+<script th:insert="/layout/js-style"></script>
+</body>
+</html>
